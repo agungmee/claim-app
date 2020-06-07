@@ -13,6 +13,7 @@
 <body>
 
 <?php
+
 include_once 'include/navbar.php'; 
 include_once 'include/jumbotron_upload.php';
 
