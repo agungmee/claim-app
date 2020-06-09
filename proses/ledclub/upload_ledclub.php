@@ -34,9 +34,9 @@
             move_uploaded_file($_FILES['imgDownlight']['tmp_name'],'imgupload/'.$rand.'_'.$filename2);
             move_uploaded_file($_FILES['imgWifi']['tmp_name'],'imgupload/'.$rand.'_'.$filename3);
             mysqli_query($koneksi, "INSERT INTO ledclub VALUES (NULL, '$nama','$bulan','$site','$nsales','$nmd','$xx1','$pled','$lled','$xx2','$pdownlight','$ldownlight','$xx3','$pwifi','$lwifi','$date')");
-            // header("location:index.php?alert=berhasil");
+            header("location:confirm.php?alert=berhasil");
         }else {
-            // header("location:index.php?alert=gagal_ukuran");
+            header("location:confirm.php?alert=gagal_ukuran");
         }
 
 ?>

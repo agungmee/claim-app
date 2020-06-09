@@ -5,6 +5,7 @@
 
 <?php include_once '../../include/navbar.php'; ?>
 <?php include_once '../../include/footer.php'; ?>
+<?php include_once '../../koneksi.php'; ?>
 <br><br>
 
 <style>
@@ -19,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TR-CLAIM | Form Upload Display LDC 2020</title>
+    <title>TR-CLAIM | Form Upload Display LEDClub 2020</title>
 </head>
 <body>
     
@@ -27,65 +28,65 @@
 </html>
 <div class="container">
     <div class="card">
-        <div class="card-header">Upload Display LDC 2020</div><br>
+        <div class="card-header">Upload Display LEDClub 2020</div><br>
         <div class="container">
-        <form>
+        <form action="upload_ldc.php" method="post" enctype="multipart/form-data">
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="custname">Nama Customer</label>
-                <input type="text" class="form-control" id="custname" placeholder="Nama Customer">
+                <input type="text" name="custname" class="form-control" id="custname" placeholder="Nama Customer">
             </div>
             <div class="form-group col-md-12">
                 <label for="bulan">Pilih Bulan Claim</label>
-                    <select class="form-control" id="bulan">
-                    <option>Januari</option>
-                    <option>Februari</option>
-                    <option>Maret</option>
-                    <option>April</option>
-                    <option>Mei</option>
-                    <option>Juni</option>
-                    <option>Juli</option>
+                    <select class="form-control" id="bulan" name="bulan">
+                    <option value="Januari">Januari</option>
+                    <option value="Februari">Februari</option>
+                    <option value="Maret">Maret</option>
+                    <option value="April">April</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Juni">Juni</option>
+                    <option value="Juli">Juli</option>
                     </select>
             </div>        
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="territory">Pilih Territory</label>
-                    <select class="form-control" id="territory">
-                    <option>Jakarta 1</option>
-                    <option>Jakarta 2</option>
-                    <option>Jakarta 3</option>
-                    <option>Jakarta 4</option>
-                    <option>Jakarta 5</option>
-                    <option>Tangerang</option>
+                    <select name="site" class="form-control" id="territory">
+                    <option value="Jakarta 1">Jakarta 1</option>
+                    <option value="Jakarta 2">Jakarta 2</option>
+                    <option value="Jakarta 3">Jakarta 3</option>
+                    <option value="Jakarta 4">Jakarta 4</option>
+                    <option value="Jakarta 5">Jakarta 5</option>
+                    <option value="Tangerang">Tangerang</option>
                     </select>
             </div>        
             <div class="form-group col-md-4">
                 <label for="sales">Nama Sales</label>
-                <input type="text" class="form-control" id="sales" placeholder="Nama Sales">
+                <input name="namaSales" type="text" class="form-control" id="sales" placeholder="Nama Sales">
             </div>
             <div class="form-group col-md-4">
                 <label for="md">Nama MD</label>
-                <input type="text" class="form-control" id="md" placeholder="Nama MD">
+                <input name="namaMd" type="text" class="form-control" id="md" placeholder="Nama MD">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="led">Foto Display</label>
-                <input type="file" class="form-control-file" id="led">
+                <label for="led">Foto Display LDC</label>
+                <input name="imgLdc" type="file" class="form-control-file" id="led">
             </div>
             <div class="form-group col-md-4 col-sm-6">
                 <label for="panjangled">Pajang</label>
-                <input type="text" class="form-control" id="panjangled" placeholder="Panjang Display">
+                <input name="pLdc" type="text" class="form-control" id="panjangled" placeholder="Panjang Display LED">
             </div>
             <div class="form-group col-md-4 col-sm-6">
                 <label for="lebarled">Lebar</label>
-                <input type="text" class="form-control" id="lebarleds" placeholder="Lebar Display">
+                <input name="lLdc" type="text" class="form-control" id="lebarled" placeholder="Lebar Display LED">
             </div>
         </div>
 	<button style="margin-top: 20px;" type="submit" class="btn btn-primary">Upload</button><br><br>
 </form>
 </div>
 </div>
-<br><br><br>
+<br><br><br><br>
 </div>
